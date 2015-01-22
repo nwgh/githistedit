@@ -1,0 +1,19 @@
+This extension makes 'hg histedit' work more like 'git rebase -i' (for
+those of us, like me, with almost indefeatable muscle memory).
+
+Basically, when telling 'hg histedit' what you want to do in your $EDITOR,
+instead of using the default hg actions (which are similarly named, but not
+exactly so to those from 'git rebase -i'), you get to use the ones from
+'git rebase -i' that you're already used to. Pretty simple.
+
+Obviously, you need mercurial installed and the histedit extension enabled
+for this to do anything useful.
+
+This is incredibly lightly tested. No guarantees this won't, y'know, totally
+trash your repo or something.
+
+To enable this, simply put the following in the hgrc of your choice:
+
+[extensions]
+histedit = 
+githistedit = /path/to/githistedit/githistedit.py
